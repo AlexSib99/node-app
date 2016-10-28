@@ -5,6 +5,10 @@ var app = express();
 
 app.use(express.static(path.join(__dirname, '..', 'client')));
 
+app.get('/about', (req, res) => {
+    res.send('About');
+});
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'home.html'));
 });

@@ -6,7 +6,7 @@ var app = express();
 app.use(express.static(path.join(__dirname, '..', 'client')));
 
 app.get('/about', (req, res) => {
-    res.send('About');
+    res.sendFile(path.join(__dirname, 'views', 'about.html'));
 });
 
 app.get('/', (req, res) => {
